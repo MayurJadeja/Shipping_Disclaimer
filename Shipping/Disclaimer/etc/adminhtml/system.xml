@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="sales" translate="label" sortOrder="999">
+			<label>sales</label>
+		</tab>
+		<section id="disclaimer" sortOrder="330" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Shipping Disclaimer</label>
+			<tab>sales</tab>
+			<resource>Shipping_Disclaimer::config_shipping_disclaimer</resource>
+			<group id="options" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Shipping Disclaimer</label>
+				<field id="enabled" type="select" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Display Shipping Disclaimer</label>
+					<comment/>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+				</field>
+				<field id="disclaimer" type="textarea" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Shipping Disclaimer</label>
+					<comment/>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
